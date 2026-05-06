@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Drive Is Avilable in India</p>
+    <input type="text" id="vote" value="" placeholder="age">
+    <input type="text" id="country" value="" placeholder="country">
+    <button id="submit">check your voting</button>
+    <button id="drivBtn">check your drive eligibility</button>
+    <hr>
+    <p id="voiting"></p>
+
+    
+    <script>
+        let voiting = document.getElementById('voiting')
+        let submit = document.getElementById('submit')
+        
+        submit.onclick = () => {
+            let age = document.getElementById('vote').value
+            if (age >= 18){
+                voiting.innerHTML = 'You can vote'
+            } else (
+                voiting.innerHTML = 'You can not vote'
+            )
+        }
+
+        let drivBtn = document.getElementById('drivBtn')
+        drivBtn.onclick = () => {
+            let age = document.getElementById('vote').value
+            let country = document.getElementById('country').value
+
+            if (age >= 18 && country == india){
+                voiting.innerHTML = 'You can drive!'
+            } else {
+                voiting.innerHTML = 'You can Not drive!'
+            }
+        }
+    </script>
+</body>
+</html>
