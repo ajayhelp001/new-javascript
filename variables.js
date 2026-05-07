@@ -11,5 +11,3 @@ console.log('2nd' + b);
 
 const c = 'c hello'
 console.log(c);
-
-
